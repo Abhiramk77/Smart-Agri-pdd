@@ -60,6 +60,7 @@ export function Login() {
                   <Mail className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   required
@@ -73,12 +74,15 @@ export function Login() {
 
             <div className="pt-2">
               <button
+                id="login-button"
                 type="submit"
                 className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
                 Sign In <ArrowRight size={16} />
               </button>
             </div>
           </form>
+
+
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">

@@ -35,31 +35,40 @@ export function AdminDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Recent Activity</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-4">Recent User Logins</h2>
           <div className="space-y-4">
             <div className="flex items-center space-x-4 py-3 border-b border-gray-50 last:border-0">
               <div className="w-2 h-2 rounded-full bg-green-500"></div>
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-900">New Farmer Registration</p>
-                <p className="text-xs text-gray-500">John Doe (Agriculture)</p>
+                <p className="text-sm font-medium text-gray-900">Farmer Login</p>
+                <p className="text-xs text-gray-500">John Farmer (farmer@farming.com)</p>
               </div>
-              <span className="text-xs text-gray-400">2 mins ago</span>
+              <div className="text-right">
+                <p className="text-xs font-medium text-gray-900">{new Date().toLocaleDateString()}</p>
+                <p className="text-xs text-gray-400">{new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+              </div>
             </div>
             <div className="flex items-center space-x-4 py-3 border-b border-gray-50 last:border-0">
               <div className="w-2 h-2 rounded-full bg-blue-500"></div>
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-900">Contract Completed</p>
-                <p className="text-xs text-gray-500">Contract #4928</p>
+                <p className="text-sm font-medium text-gray-900">Buyer Login</p>
+                <p className="text-xs text-gray-500">Acme Buyer (buyer@farming.com)</p>
               </div>
-              <span className="text-xs text-gray-400">1 hour ago</span>
+              <div className="text-right">
+                <p className="text-xs font-medium text-gray-900">{new Date().toLocaleDateString()}</p>
+                <p className="text-xs text-gray-400">{new Date(Date.now() - 3600000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+              </div>
             </div>
             <div className="flex items-center space-x-4 py-3 border-b border-gray-50 last:border-0">
               <div className="w-2 h-2 rounded-full bg-purple-500"></div>
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-900">New Buyer Registration</p>
-                <p className="text-xs text-gray-500">Acme Corp</p>
+                <p className="text-sm font-medium text-gray-900">Admin Login</p>
+                <p className="text-xs text-gray-500">Admin User (admin@farming.com)</p>
               </div>
-              <span className="text-xs text-gray-400">3 hours ago</span>
+              <div className="text-right">
+                <p className="text-xs font-medium text-gray-900">{new Date().toLocaleDateString()}</p>
+                <p className="text-xs text-gray-400">{new Date(Date.now() - 7200000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+              </div>
             </div>
           </div>
         </div>

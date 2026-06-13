@@ -20,8 +20,9 @@ const startTunnel = async (port, subdomain, name) => {
 };
 
 console.log('Starting permanent deployment tunnels...');
-startTunnel(3000, 'farming-api-1234', 'Backend API');
-startTunnel(5173, 'farming-web-1234', 'Frontend Web');
+startTunnel(3000, 'smart-agri-api-99', 'Backend API');
+startTunnel(5173, 'smart-agri-web-99', 'Frontend Web');
+startTunnel(54874, 'smart-agri-flutter-99', 'Flutter App');
 
 // Keep process alive
 setInterval(() => {}, 1000 * 60 * 60);
