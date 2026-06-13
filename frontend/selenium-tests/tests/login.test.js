@@ -1,4 +1,5 @@
 import { Builder, By, until } from 'selenium-webdriver';
+import chrome from 'selenium-webdriver/chrome.js';
 import assert from 'assert';
 
 describe('Login Flow E2E Test', function () {
@@ -6,7 +7,16 @@ describe('Login Flow E2E Test', function () {
   let driver;
 
   before(async function () {
-    driver = await new Builder().forBrowser('chrome').build();
+    const options = new chrome.Options();
+    options.addArguments('--headless');
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
+    options.addArguments('--disable-gpu');
+
+    driver = await new Builder()
+      .forBrowser('chrome')
+      .setChromeOptions(options)
+      .build();
   });
 
   after(async function () {
