@@ -67,19 +67,14 @@ def create_flutter_app_screens():
         draw.text((120, 420), "Email", fill='#666666', font=font_text)
         draw.text((120, 450), "farmer@farming.com", fill='#999999', font=font_text)
 
-        # Password field
-        draw.rectangle([(100, 550), (980, 650)], fill='white', outline='#CCCCCC', width=2)
-        draw.text((120, 570), "Password", fill='#666666', font=font_text)
-        draw.text((120, 600), "••••••••••", fill='#999999', font=font_text)
-
         # Sign In button
-        draw.rectangle([(100, 750), (980, 850)], fill='#2D5016', width=0)
+        draw.rectangle([(100, 600), (980, 700)], fill='#2D5016', width=0)
         bbox = draw.textbbox((0, 0), "SIGN IN", font=font_title)
         btn_text_width = bbox[2] - bbox[0]
-        draw.text(((WIDTH - btn_text_width) // 2, 770), "SIGN IN", fill='white', font=font_title)
+        draw.text(((WIDTH - btn_text_width) // 2, 620), "SIGN IN", fill='white', font=font_title)
 
         # Sign up link
-        draw.text(((WIDTH - 300) // 2, 950), "Don't have account? SIGN UP", fill='#2D5016', font=font_text)
+        draw.text(((WIDTH - 300) // 2, 800), "Don't have account? SIGN UP", fill='#2D5016', font=font_text)
 
         return img
 
