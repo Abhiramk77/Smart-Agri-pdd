@@ -23,7 +23,14 @@ app.post('/api/auth/signup', (req, res) => {
   }
   const existingUser = users.find(u => u.email === email);
   if (existingUser) {
-    return res.status(409).json({ message: 'User already exists' });
+    // If user already exists, update their details and log them in
+    existingUser.name = name || existingUser.name;
+    existingUser.mobile = mobile || existingUser.mobile;
+    existingUser.state = state || existingUser.state;
+    existingUser.city = city || existingUser.city;
+    existingUser.category = category || existingUser.category;
+    
+    return res.status(200).json({ user: existingUser, token: `mock_token_${existingUser.id}` });
   }
   const newUser = {
     id: `u_${Date.now()}`,
