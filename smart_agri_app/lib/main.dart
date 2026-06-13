@@ -129,8 +129,8 @@ class MockStore extends ChangeNotifier {
           'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&q=80&w=800',
       quantity: '500 kg',
       quality: 'Grade A',
-      price: '\$2.50/kg',
-      totalPrice: '\$1,250',
+      price: '₹2.50/kg',
+      totalPrice: '₹1,250',
       timeline: 'Oct 15 - Nov 30',
       deliveryLocation: 'Central Market, NY',
       distance: '45 miles',
@@ -148,8 +148,8 @@ class MockStore extends ChangeNotifier {
           'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800',
       quantity: '1000 L/week',
       quality: 'Premium',
-      price: '\$1.20/L',
-      totalPrice: '\$4,800/mo',
+      price: '₹1.20/L',
+      totalPrice: '₹4,800/mo',
       timeline: 'Ongoing',
       deliveryLocation: 'Processing Plant, NJ',
       distance: '12 miles',
@@ -168,8 +168,8 @@ class MockStore extends ChangeNotifier {
           'https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?auto=format&fit=crop&q=80&w=800',
       quantity: '2000 lbs',
       quality: 'Export Grade',
-      price: '\$8.50/lb',
-      totalPrice: '\$17,000',
+      price: '₹8.50/lb',
+      totalPrice: '₹17,000',
       timeline: 'Dec 1 - Dec 15',
       deliveryLocation: 'Port Authority, Boston',
       distance: '85 miles',
@@ -1286,7 +1286,7 @@ class _ContractCard extends StatelessWidget {
                     _InfoChip(icon: Icons.scale, label: contract.quantity),
                     const SizedBox(width: 8),
                     _InfoChip(
-                        icon: Icons.attach_money,
+                        icon: Icons.currency_rupee,
                         label: contract.totalPrice),
                     const SizedBox(width: 8),
                     _InfoChip(
@@ -1501,7 +1501,7 @@ class ContractDetailPage extends StatelessWidget {
     double countryTax = amount * 0.02;
     double total = amount + stateTax + countryTax;
 
-    String formatCurrency(double val) => '\$${val.toStringAsFixed(2)}';
+    String formatCurrency(double val) => '₹${val.toStringAsFixed(2)}';
 
     showDialog(
       context: context,
@@ -1791,7 +1791,7 @@ class _CreateContractPageState extends State<CreateContractPage> {
             const SizedBox(height: 14),
             TextField(controller: _qualityCtrl, decoration: _inputDec('Quality (e.g. Grade A)')),
             const SizedBox(height: 14),
-            TextField(controller: _priceCtrl, decoration: _inputDec('Price (e.g. \$2.50/kg)')),
+            TextField(controller: _priceCtrl, decoration: _inputDec('Price (e.g. ₹2.50/kg)')),
             const SizedBox(height: 14),
             TextField(controller: _timelineCtrl, decoration: _inputDec('Timeline (e.g. Oct 15 - Nov 30)')),
             const SizedBox(height: 14),

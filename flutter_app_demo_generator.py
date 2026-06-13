@@ -133,7 +133,7 @@ def create_flutter_app_screens():
         activities = [
             ("Fresh Foods Co. accepted your offer", "2 hours ago"),
             ("New contract: Organic Tomatoes", "4 hours ago"),
-            ("Payment received: $1,250", "1 day ago")
+            ("Payment received: ₹1,250", "1 day ago")
         ]
 
         y_offset = cards_y + 500
@@ -179,22 +179,22 @@ def create_flutter_app_screens():
             {
                 "title": "Organic Tomatoes",
                 "seller": "Fresh Foods Co. ⭐ 4.8",
-                "quantity": "500 kg • $2.50/kg",
-                "price": "$1,250",
+                "quantity": "500 kg • ₹2.50/kg",
+                "price": "₹1,250",
                 "img": "🍅"
             },
             {
                 "title": "Atlantic Salmon",
                 "seller": "Ocean Catch Inc. ⭐ 4.6",
-                "quantity": "2000 lbs • $8.50/lb",
-                "price": "$17,000",
+                "quantity": "2000 lbs • ₹8.50/lb",
+                "price": "₹17,000",
                 "img": "🐟"
             },
             {
                 "title": "Raw Milk",
                 "seller": "Green Valley Dairy ⭐ 4.9",
-                "quantity": "1000 L/week • $1.20/L",
-                "price": "$4,800/mo",
+                "quantity": "1000 L/week • ₹1.20/L",
+                "price": "₹4,800/mo",
                 "img": "🥛"
             }
         ]

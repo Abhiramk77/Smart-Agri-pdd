@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { TrendingUp, Calendar, DollarSign, ChevronRight, Loader2 } from 'lucide-react';
+import { TrendingUp, Calendar, IndianRupee, ChevronRight, Loader2 } from 'lucide-react';
 import { contractService, Contract } from '../../api/services';
 
 export function FarmerDashboard() {
@@ -75,12 +75,12 @@ export function FarmerDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="bg-primary text-white p-6 rounded-2xl shadow-md relative overflow-hidden">
           <div className="absolute -right-4 -top-4 opacity-10">
-            <DollarSign size={100} />
+            <IndianRupee size={100} />
           </div>
           <p className="text-primary-light font-medium mb-1">
             Expected Revenue
           </p>
-          <p className="text-3xl font-bold">${totalEarnings.toLocaleString()}</p>
+          <p className="text-3xl font-bold">₹{totalEarnings.toLocaleString()}</p>
           <p className="text-sm mt-4 text-white/80">Total gross income</p>
         </div>
 
@@ -89,7 +89,7 @@ export function FarmerDashboard() {
             <TrendingUp size={20} />
           </div>
           <p className="text-gray-500 font-medium mb-1">Est. Profit</p>
-          <p className="text-2xl font-bold text-gray-900">${(totalEarnings * 0.75).toLocaleString()}</p>
+          <p className="text-2xl font-bold text-gray-900">₹{(totalEarnings * 0.75).toLocaleString()}</p>
           <p className="text-sm mt-2 text-green-600 font-medium">+75% Margin</p>
         </div>
 
@@ -98,7 +98,7 @@ export function FarmerDashboard() {
             <TrendingUp size={20} className="rotate-180" />
           </div>
           <p className="text-gray-500 font-medium mb-1">Est. Expenses</p>
-          <p className="text-2xl font-bold text-gray-900">${(totalEarnings * 0.25).toLocaleString()}</p>
+          <p className="text-2xl font-bold text-gray-900">₹{(totalEarnings * 0.25).toLocaleString()}</p>
           <p className="text-sm mt-2 text-red-600 font-medium">25% Overhead</p>
         </div>
 

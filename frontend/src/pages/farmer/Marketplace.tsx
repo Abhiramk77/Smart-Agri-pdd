@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MapPin, Clock, DollarSign, Filter, Star, Loader2 } from 'lucide-react';
+import { MapPin, Clock, IndianRupee, Filter, Star, Loader2 } from 'lucide-react';
 import { contractService, Contract } from '../../api/services';
 
 export function FarmerMarketplace() {

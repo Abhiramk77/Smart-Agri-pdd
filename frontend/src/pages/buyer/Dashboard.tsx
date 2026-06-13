@@ -4,7 +4,7 @@ import {
   FileText,
   Clock,
   CheckCircle,
-  DollarSign,
+  IndianRupee,
   Plus,
   ArrowRight,
   Loader2 } from
@@ -48,11 +48,11 @@ export function BuyerDashboard() {
   },
   {
     label: 'Total Spent',
-    value: `$${contracts.reduce((acc, curr) => {
+    value: `₹${contracts.reduce((acc, curr) => {
       const p = curr.totalPrice.match(/[\d,.]+/);
       return acc + (p ? parseFloat(p[0].replace(/,/g, '')) : 0);
     }, 0).toLocaleString()}`,
-    icon: DollarSign,
+    icon: IndianRupee,
     color: 'bg-purple-100 text-purple-600'
   }];
 

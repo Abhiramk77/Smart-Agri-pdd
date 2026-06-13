@@ -48,7 +48,7 @@ export function CreateContract() {
     const qty = parseFloat(formData.quantity.replace(/[^\d.]/g, '')) || 1;
     const prc = parseFloat(formData.price.replace(/[^\d.]/g, '')) || 0;
     const computedTotal = qty * prc;
-    const finalTotalPrice = computedTotal > 0 ? `$${computedTotal.toLocaleString()}` : 'TBD';
+    const finalTotalPrice = computedTotal > 0 ? `₹${computedTotal.toLocaleString()}` : 'TBD';
 
     try {
       await contractService.createContract({
@@ -247,7 +247,7 @@ export function CreateContract() {
                   </label>
                   <input
                   type="text"
-                  placeholder="e.g., $1.20"
+                  placeholder="e.g., ₹1.20"
                   value={formData.price}
                   onChange={(e) => updateForm('price', e.target.value)}
                   className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-primary" />
@@ -402,7 +402,7 @@ export function CreateContract() {
                     {(() => {
                       const qty = parseFloat(formData.quantity.replace(/[^\d.]/g, '')) || 1;
                       const prc = parseFloat(formData.price.replace(/[^\d.]/g, '')) || 0;
-                      return qty * prc > 0 ? `$${(qty * prc).toLocaleString()}` : 'TBD';
+                      return qty * prc > 0 ? `₹${(qty * prc).toLocaleString()}` : 'TBD';
                     })()}
                   </span>
                 </div>
@@ -440,7 +440,7 @@ export function CreateContract() {
                   {(() => {
                     const qty = parseFloat(formData.quantity.replace(/[^\d.]/g, '')) || 1;
                     const prc = parseFloat(formData.price.replace(/[^\d.]/g, '')) || 0;
-                    return qty * prc > 0 ? `$${(qty * prc).toLocaleString()}` : 'TBD';
+                    return qty * prc > 0 ? `₹${(qty * prc).toLocaleString()}` : 'TBD';
                   })()}
                 </span>
               </div>
@@ -507,7 +507,7 @@ export function CreateContract() {
                     {(() => {
                       const qty = parseFloat(formData.quantity.replace(/[^\d.]/g, '')) || 1;
                       const prc = parseFloat(formData.price.replace(/[^\d.]/g, '')) || 0;
-                      return qty * prc > 0 ? `$${(qty * prc).toLocaleString()}` : 'TBD';
+                      return qty * prc > 0 ? `₹${(qty * prc).toLocaleString()}` : 'TBD';
                     })()}
                   </span>
                 </div>

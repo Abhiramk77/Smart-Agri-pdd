@@ -247,7 +247,7 @@ export function FarmerContractDetail() {
                         type="text"
                         value={negotiatePrice}
                         onChange={(e) => setNegotiatePrice(e.target.value)}
-                        placeholder="$"
+                        placeholder="₹"
                         className="flex-1 p-2 border border-gray-300 rounded-lg outline-none focus:border-primary" />
                       
                         <button 

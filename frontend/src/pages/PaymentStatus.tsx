@@ -7,21 +7,21 @@ const mockPayments = [
   {
     id: 'PAY-1001',
     date: '2026-05-01',
-    amount: '$1,200',
+    amount: '₹1,200',
     status: 'completed',
     contract: 'Wheat Delivery',
   },
   {
     id: 'PAY-1002',
     date: '2026-05-03',
-    amount: '$3,400',
+    amount: '₹3,400',
     status: 'pending',
     contract: 'Corn Supply',
   },
   {
     id: 'PAY-1003',
     date: '2026-05-04',
-    amount: '$850',
+    amount: '₹850',
     status: 'failed',
     contract: 'Soybean Initial',
   }
@@ -192,7 +192,7 @@ export function PaymentStatus() {
                     <span className="font-medium text-gray-900">
                       {(() => {
                         const amount = parseFloat(selectedReceipt.amount.replace(/[^0-9.-]+/g, '')) || 0;
-                        return `$${(amount * 0.05).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                        return `₹${(amount * 0.05).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
                       })()}
                     </span>
                   </div>
@@ -201,7 +201,7 @@ export function PaymentStatus() {
                     <span className="font-medium text-gray-900">
                       {(() => {
                         const amount = parseFloat(selectedReceipt.amount.replace(/[^0-9.-]+/g, '')) || 0;
-                        return `$${(amount * 0.02).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                        return `₹${(amount * 0.02).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
                       })()}
                     </span>
                   </div>
@@ -210,7 +210,7 @@ export function PaymentStatus() {
                     <span className="font-bold text-primary text-lg">
                       {(() => {
                         const amount = parseFloat(selectedReceipt.amount.replace(/[^0-9.-]+/g, '')) || 0;
-                        return `$${(amount * 1.07).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                        return `₹${(amount * 1.07).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
                       })()}
                     </span>
                   </div>

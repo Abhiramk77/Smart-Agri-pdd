@@ -194,7 +194,7 @@ export function SellProduct() {
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g., $1.20"
+                    placeholder="e.g., ₹1.20"
                     value={formData.price}
                     onChange={(e) => updateForm('price', e.target.value)}
                     className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-primary"
